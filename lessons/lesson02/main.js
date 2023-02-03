@@ -1,7 +1,7 @@
 // Масиви та об'єкти:
 // - Створити масив, наповнити його 10 елементами будь-якого типу, вивести кожен елемент в консоль
 
-var arr = [1, 2, 3, "hello", 5, "6", "7", false, null, undefined];
+const arr = [1, 2, 3, "hello", 5, "6", "7", false, null, undefined];
 console.log(
   arr[0],
   arr[1],
@@ -17,17 +17,17 @@ console.log(
 
 // - Створити 3 об'єкти які описують книги. Поля об'єкту : title ,pageCount, genre.
 
-var book1 = {
+const book1 = {
   title: "Енеїда",
   pageCount: 300,
   genre: "Комедія",
 };
-var book2 = {
+const book2 = {
   title: "Катерина",
   pageCount: 50,
   genre: "Журба",
 };
-var book3 = {
+const book3 = {
   title: "Хіба ревуть воли як ясла повні",
   pageCount: 323,
   genre: "Фікшн",
@@ -37,7 +37,7 @@ console.log(book1, book2, book3);
 
 // - Створити 3 об'єкти які описують книги. Поля об'єкту : title ,pageCount, genre, authors. Поле "автори" - являється  масивом. Кожен автор має поля name та age.
 
-var book4 = {
+const book4 = {
   title: "Алгоритми кожен день",
   pageCount: 300,
   genre: "Наука",
@@ -49,7 +49,7 @@ var book4 = {
     { name: "Андрюха", age: 28 },
   ],
 };
-var book5 = {
+const book5 = {
   title: "Java Script та інші веселі пригоди програмістів",
   pageCount: 50,
   genre: "Комедія",
@@ -61,7 +61,7 @@ var book5 = {
     { name: "Дописаний Степан Іванович", age: 28 },
   ],
 };
-var book6 = {
+const book6 = {
   title: "Патерни проектування в повсякденному житті",
   pageCount: 323,
   genre: "Журба",
@@ -78,7 +78,7 @@ console.log(book4, book5, book6);
 
 // - Створити масив з 10 об'єктами які описують сутніть "користувач". Поля: name, username,password. Вивести в консоль пароль кожного користувача
 
-var tenUsers = [
+const tenUsers = [
   { name: "Олександр", username: "oleksandr", password: "123" },
   { name: "Степан", username: "stepan", password: "234" },
   { name: "Іван", username: "ivan", password: "456" },
@@ -174,8 +174,8 @@ console.log(x);
 
 // - з файлу arrays.js (лежить в папці 2023 plan ) взяти масив coursesAndDurationArray. За допомоги іф перевірити кожен його елемент на тривалість навчання.
 // У випадку якщо тривалість довша за 5 місяців вивести в консоль "Супер".
-for (couse of coursesAndDurationArray) {
-  if (couse.monthDuration > 5) {
+for (course of coursesAndDurationArray) {
+  if (course.monthDuration > 5) {
     console.log("Супер");
   }
 }
