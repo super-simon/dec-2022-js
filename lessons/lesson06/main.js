@@ -29,7 +29,7 @@ console.log(
 console.log(
   `Є "брудна" стрінга let str = ' dirty string   ' . Почистити її від зайвих пробілів.`
 );
-console.log(" dirty string   ".replaceAll(" ", ""));
+console.log(" dirty string   ".trim());
 
 // - Напишіть функцію stringToarray(str), яка перетворює рядок на масив слів.
 //     let str = 'Ревуть воли як ясла повні';
