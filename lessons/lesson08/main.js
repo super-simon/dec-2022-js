@@ -16,33 +16,21 @@ console.log(
 );
 const users = [];
 users.push(
-  new User(3, "Oleksandr", "Stetsiuk", "oleksandr@email.com", "+380123456780")
-);
-users.push(
-  new User(2, "Taras", "Shevchenko", "taras@email.com", "+380123456781")
-);
-users.push(
-  new User(1, "Lesia", "Ukrainka", "lesia@email.com", "+380123456782")
-);
-users.push(new User(4, "Ivan", "Franko", "ivan@email.com", "+380123456783"));
-users.push(
-  new User(8, "Hryhoriy", "Skovoroda", "hryhoriy@email.com", "+380123456784")
-);
-users.push(
+  new User(3, "Oleksandr", "Stetsiuk", "oleksandr@email.com", "+380123456780"),
+  new User(2, "Taras", "Shevchenko", "taras@email.com", "+380123456781"),
+  new User(1, "Lesia", "Ukrainka", "lesia@email.com", "+380123456782"),
+  new User(4, "Ivan", "Franko", "ivan@email.com", "+380123456783"),
+  new User(8, "Hryhoriy", "Skovoroda", "hryhoriy@email.com", "+380123456784"),
   new User(
     5,
     "Ivan",
     "Kotliarevskiy",
     "kotliarevskiy@email.com",
     "+380123456785"
-  )
-);
-users.push(new User(7, "Ostap", "Vyshnia", "ostap@email.com", "+380123456786"));
-users.push(
-  new User(6, "Les", "Podervianskiy", "les@email.com", "+380123456787")
-);
-users.push(new User(9, "Lina", "Kostenko", "lina@email.com", "+380123456788"));
-users.push(
+  ),
+  new User(7, "Ostap", "Vyshnia", "ostap@email.com", "+380123456786"),
+  new User(6, "Les", "Podervianskiy", "les@email.com", "+380123456787"),
+  new User(9, "Lina", "Kostenko", "lina@email.com", "+380123456788"),
   new User(10, "Pavlo", "Tychyna", "pavlo@email.com", "+380123456789")
 );
 console.log(users);
@@ -88,22 +76,15 @@ clients.push(
     "solomiya@emainl.com",
     "+380991234560",
     ["dress", "water"]
-  )
-);
-
-clients.push(
+  ),
   new Client(3, "Tarash", "Chubai", "taras.c@emainl.com", "+380991234561", [
     ["guitar", "paper"],
-  ])
-);
-clients.push(
+  ]),
   new Client(2, "Mykola", "Lysenko", "mykola@emainl.com", "+380991234562", [
     "pants",
     "pen",
     "horse",
-  ])
-);
-clients.push(
+  ]),
   new Client(
     4,
     "Volodymyr",
@@ -111,9 +92,7 @@ clients.push(
     "volodymyr.i@emainl.com",
     "+380991234563",
     ["shirt", "apple"]
-  )
-);
-clients.push(
+  ),
   new Client(
     5,
     "Mykola",
@@ -121,26 +100,18 @@ clients.push(
     "mykola.l@emainl.com",
     "+380991234564",
     ["egg"]
-  )
-);
-clients.push(
+  ),
   new Client(6, "Ivan", "Kozlovsky", "ivan.k@emainl.com", "+380991234565", [
     "pencil",
     "water",
-  ])
-);
-clients.push(
+  ]),
   new Client(7, "Ivo", "Bobul", "ivo@emainl.com", "+380991234566", [
     "vse zoloto svitu",
-  ])
-);
-clients.push(
+  ]),
   new Client(8, "Oleh", "Skrypka", "oleh.s@emainl.com", "+380991234567", [
     "guitar",
     "mic",
-  ])
-);
-clients.push(
+  ]),
   new Client(
     9,
     "Serhiy",
@@ -189,9 +160,7 @@ clients.push(
       "verhovyna",
       "verhovyna",
     ]
-  )
-);
-clients.push(
+  ),
   new Client(10, "Stepan", "Hiha", "hiha@emainl.com", "+380991234569", [
     "hypnotic drug",
   ])
@@ -228,7 +197,11 @@ function Car(model, manufacturer, year, maxSpeed, engineVolume) {
   this.info = function () {
     for (const i in this) {
       if (Object.hasOwn(this, i) && typeof this[i] !== "function") {
-        console.log(`${i} - ${this[i]}`);
+        if (typeof this[i] === "object") {
+          console.log(this[i]);
+        } else {
+          console.log(`${i} - ${this[i]}`);
+        }
       }
     }
   };
@@ -273,7 +246,11 @@ class ClassCar {
   info = function () {
     for (const i in this) {
       if (Object.hasOwn(this, i) && typeof this[i] !== "function") {
-        console.log(`${i} - ${this[i]}`);
+        if (typeof this[i] === "object") {
+          console.log(this[i]);
+        } else {
+          console.log(`${i} - ${this[i]}`);
+        }
       }
     }
   };
@@ -306,12 +283,12 @@ function Cinderella(name, age, footSize) {
 }
 const cinderellas = [
   new Cinderella("Kateryna", 20, 7),
-  new Cinderella("Anastasiia", 22, 8),
   new Cinderella("Oksana", 19, 6.8),
-  new Cinderella("Ivanna", 18, 8),
   new Cinderella("Yuliia", 23, 6),
   new Cinderella("Mariia", 21, 7.5),
+  new Cinderella("Ivanna", 18, 8),
   new Cinderella("Sofiia", 24, 8.5),
+  new Cinderella("Anastasiia", 22, 8),
   new Cinderella("Daria", 19, 6.5),
   new Cinderella("Larysa", 22, 9.5),
   new Cinderella("Iryna", 20, 8),
@@ -338,7 +315,6 @@ for (const cinderella of cinderellas) {
     console.log(cinderella);
     break;
   }
-  console.log(null);
 }
 
 // Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку
