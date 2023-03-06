@@ -50,7 +50,6 @@ function showItems(arr, page) {
 }
 
 function prepareButtons(arr, page) {
-  console.log(page, Math.ceil(arr.length / 10), arr.length);
   prevButton.disabled = page === 1;
   nextButton.disabled = page === Math.ceil(arr.length / 10);
 }
