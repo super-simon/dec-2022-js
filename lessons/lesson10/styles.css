@@ -1,0 +1,9 @@
+#items {
+  display: flex;
+  flex-direction: row;
+}
+
+#items div {
+  border: 1px solid black;
+  padding: 0.5rem 1rem;
+}
